@@ -17,6 +17,14 @@ This repository prefers honest partial output over invented reconstruction.
 ./scripts/build.sh
 ```
 
+Windows Command Prompt:
+
+```bat
+scripts\build.bat
+```
+
+The launcher scripts auto-detect system Java and Maven first. If Java 21+ or Maven 3.9+ is missing, they download and install local copies under `./tools`.
+
 ## CLI example
 
 ```bash
@@ -31,12 +39,24 @@ This repository prefers honest partial output over invented reconstruction.
   --validate true
 ```
 
+Windows Command Prompt:
+
+```bat
+scripts\run-cli.bat --input your.mdb --output generated-runs\example
+```
+
 ## UI
 
 Run:
 
 ```bash
 ./scripts/run-ui.sh
+```
+
+Windows Command Prompt:
+
+```bat
+scripts\run-ui.bat
 ```
 
 The plain `target/*.jar` is not bundled with dependencies yet, so the launcher script is the reliable way to open the UI from this repo.
